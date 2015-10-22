@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalcTest" project="Assignment_4" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="CalcTest" time="0.0">
+    <testcase name="popTest" classname="CalcTest" time="0.0"/>
+    <testcase name="peekTest" classname="CalcTest" time="0.0"/>
+    <testcase name="pushTest" classname="CalcTest" time="0.0"/>
+  </testsuite>
+</testrun>
