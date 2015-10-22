@@ -1,4 +1,21 @@
 
-public class greetings {
-
-}
+// greetings.java
+// Greet everyone listed in people.txt
+import static java.lang.System.*;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.FileReader;
+class greetings {
+ public static void main( String[] args ) throws IOException {
+	 BufferedReader in = new BufferedReader(new FileReader("directory.txt"));
+	 while(true){
+		String name = in.readLine();
+		if(name == null)
+			 break;
+		String[] parsed = name.split(",");
+		System.out.println("Hello, " + parsed[0] + ".");
+	 	}
+ 		in.close();
+ 	}
+}	

@@ -1,0 +1,10 @@
+// SumTest.java
+// Unit tests for Sum class
+
+import org.junit.*;
+import static org.junit.Assert.assertEquals;
+
+public class SumTest {
+	
+	@Test
+}

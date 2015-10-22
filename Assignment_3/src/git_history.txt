@@ -1,0 +1,2 @@
+* f25a1d9 Add variables to makefile following lab1
+* 930c0b3 Initial commit of a makefile
