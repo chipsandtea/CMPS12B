@@ -1,51 +1,78 @@
+// Calc.java
+// Primitive RPN Calculator
+
 import java.util.*;
 
-public class Calc {
+public class Calc{
 
 	int top;
 	double[] stack;
 	int max = 100;
 	
 	public Calc(){
-		top = 0;
+		top = -1;
 		stack = new double[max];
 	}
 	
 	public double push(int key){
-		stack[top] = key;
 		top++;
+		stack[top] = key;
 		return stack[top];
 	}
 	
 	public double pop(){
-		return stack[--top];
+		return stack[top--];
 	}
 	
 	public double peek(){
-		return stack[top-1];
+		return stack[top];
 	}
 	
 	public void add(){
-		stack[top-1] = stack[top] + stack[top-1];
-		top--;
+		try{
+			stack[top-1] = stack[top] + stack[top-1];
+			top--;
+		}catch(ArrayIndexOutOfBoundsException e){
+			System.out.println("Too few items to add!");
+		}
+		
 	}
 	
 	public void subtract(){
-		stack[top-1] = stack[top]-stack[top-1];
-		top--;
+		try{
+			stack[top-1] = stack[top]-stack[top-1];
+			top--;
+		}catch(ArrayIndexOutOfBoundsException e){
+			System.out.println("Too few items to subtract!");
+		}
+		
 	}
 	
 	public void multiply(){
-		stack[top-1] = stack[top] * stack[top-1];
-		top--;
+		try{
+			stack[top-1] = stack[top] * stack[top-1];
+			top--;
+		}catch(ArrayIndexOutOfBoundsException e){
+			System.out.println("Too few items to multiply!");
+		}
+		
 	}
 	
 	public void divide(){
-		stack[top-1] = stack[top] / stack[top-1];
-		top--;
+		try{
+			stack[top-1] = stack[top] / stack[top-1];
+			top--;
+		}catch(ArrayIndexOutOfBoundsException e){
+			System.out.println("Too few items to divide!");
+		}
+		
+	}
+	
+	public void log2(){
+		stack[top] = Math.log(stack[top])/Math.log(2);
 	}
 	
 	public int depth(){
-		return top;
+		return top+1;
 	}
 }
