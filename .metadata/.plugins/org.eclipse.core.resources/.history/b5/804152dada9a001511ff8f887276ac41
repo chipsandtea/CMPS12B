@@ -1,0 +1,14 @@
+
+public class cyoa {
+
+	public static void main(String[] args) throws IOException{
+		loadAdventure(args[0]);
+
+	}
+	
+	public static void loadAdventure(String filename){
+		Adventure adv = new Adventure(filename);
+		
+	}
+
+}

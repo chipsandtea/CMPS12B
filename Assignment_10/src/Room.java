@@ -13,6 +13,14 @@ public class Room {
 		
 	}
 	
+	public String findOptionText(char key){
+		return roomOptions.get(key-97).toString();
+	}
+	
+	public String findOptionTag(char key){
+		return roomOptions.get(key-97).getTag();
+	}
+	
 	public void addDescription(String description){
 		roomDescription.add(description);
 	}
@@ -27,5 +35,23 @@ public class Room {
 	
 	public void addTag(String tagText){
 		roomOptions.get(roomOptions.size()-1).addTag(tagText);
+	}
+	
+	//Test method in cyoa.java - testRoom()
+	public String toString(){
+		String descriptionOutput = "";
+		for(int i = 0; i < roomDescription.size(); i++){
+			descriptionOutput = descriptionOutput + roomDescription.get(i) + "\n\n";
+		}
+		
+		String optionOutput = "";
+		char choice = 97;
+		for(int i = 0; i < roomOptions.size(); i++){
+			optionOutput = optionOutput + String.valueOf(choice) + "  -  " + 
+							roomOptions.get(i).toString() + "\n";
+			choice++;
+		}
+		
+		return descriptionOutput + optionOutput;
 	}
 }

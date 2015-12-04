@@ -1,0 +1,21 @@
+import java.io.*;
+
+public class cyoa {
+
+	public static void main(String[] args) throws IOException{
+		loadAdventure(args[0]);
+
+	}
+	
+	public static void loadAdventure(String filename) throws IOException{
+		//Adventure adv = new Adventure(filename);
+		Room rm = new Room("testRoom");
+		rm.addDescription("Test Description 1");
+		rm.addDescription("Test Description 2");
+		rm.addOption("Test Option 1");
+		rm.addTag("option1");
+		rm.addOption("Test Option 2");
+		rm.addTag("option2");
+	}
+
+}

@@ -1,0 +1,49 @@
+import java.util.*;
+public class Room {
+	
+	private String roomKey;
+	private ArrayList<String> roomDescription;
+	private ArrayList<Option> roomOptions;
+	
+	public Room(String key){
+		roomKey = key;
+		roomDescription = new ArrayList<String>();
+		roomOptions = new ArrayList<Option>();
+		
+		
+	}
+	
+	public void addDescription(String description){
+		roomDescription.add(description);
+	}
+	
+	public void addOption(String optionText){
+		roomOptions.add(new Option(optionText));
+	}
+	
+	public Option getOption(String tag){
+		return roomOptions.get(roomOptions.indexOf(tag));
+	}
+	
+	public void addTag(String tagText){
+		roomOptions.get(roomOptions.size()-1).addTag(tagText);
+	}
+	
+	//Test method in cyoa.java - testRoom()
+	public String toString(){
+		String descriptionOutput = "";
+		for(int i = 0; i < roomDescription.size(); i++){
+			descriptionOutput = descriptionOutput + roomDescription.get(i) + "\n\n";
+		}
+		
+		String optionOutput = "";
+		char choice = 97;
+		for(int i = 0; i < roomOptions.size(); i++){
+			optionOutput = optionOutput + String.valueOf(choice) + "  -  " + 
+							roomOptions.get(i).toString() + "\n";
+			choice++;
+		}
+		
+		return descriptionOutput + optionOutput + "\n";
+	}
+}

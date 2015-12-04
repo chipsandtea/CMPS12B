@@ -12,6 +12,10 @@ public class Adventure {
 		
 	}
 	
+	private void playTurn(Scanner kb){
+		//Runs through one turn
+	}
+	
 	private void parseAdventureFile(String filename) throws IOException{
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filename));
