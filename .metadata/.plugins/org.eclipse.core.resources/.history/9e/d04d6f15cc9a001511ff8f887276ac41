@@ -1,0 +1,36 @@
+import java.util.*;
+import java.io.*;
+public class Adventure {
+
+	Room currentRoom;
+	Room prevRoom; //Not sure if needed atm
+	boolean haveWon; //Will attempt to implement by running game via while loop
+	
+	public Adventure(String filename){
+		
+	}
+	
+	private void parseAdventureFile(String filename){
+		
+	}
+	
+	private void parseRoom(Scanner kb){ //Scanner to be passed by ref from parseAdventureFile
+		
+	}
+	
+	private void parseCommand(char key){
+		//Switch statement
+	}
+	
+	private void setDescription(String descriptionText){
+		
+	}
+	
+	private void addOption(String optionText){
+		
+	}
+	
+	private void setTag(String tagText){
+		
+	}
+}

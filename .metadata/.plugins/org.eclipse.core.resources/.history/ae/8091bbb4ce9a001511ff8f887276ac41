@@ -1,0 +1,6 @@
+
+public class Option {
+	public Option(String optionText){
+		
+	}
+}

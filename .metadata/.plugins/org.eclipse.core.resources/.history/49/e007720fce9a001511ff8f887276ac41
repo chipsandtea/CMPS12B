@@ -1,0 +1,60 @@
+import java.util.*;
+import java.io.*;
+public class Adventure {
+
+	Room currentRoom;
+	Room prevRoom; //Not sure if needed atm
+	boolean haveWon; //Will attempt to implement by running game via while loop
+	
+	public Adventure(String filename) throws IOException{
+		parseAdventureFile(filename);
+		
+		
+	}
+	
+	private void parseAdventureFile(String filename) throws IOException{
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(filename));
+			
+			while(true){
+				String line = reader.readLine();
+				
+				if(line == null){
+					break;
+				}
+				
+				switch(parseCommand(line.charAt(0))){
+				case 1: makeRoom(line.substring(2)); break;
+				case 2: setDescription(line.substring(2)); break;
+				case 3: addOption(line.substring(2)); break;
+				case 4: setTag(line.substring(2)); break;
+				default: System.out.println("Invalid command!");
+				}
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println("Invalid file name!");
+			e.printStackTrace();
+		}
+	}
+	
+	private int parseCommand(char key){
+		//Switch statement
+		return 0;
+	}
+	
+	private void makeRoom(String key){
+		
+	}
+	
+	private void setDescription(String descriptionText){
+		
+	}
+	
+	private void addOption(String optionText){
+		
+	}
+	
+	private void setTag(String tagText){
+		
+	}
+}

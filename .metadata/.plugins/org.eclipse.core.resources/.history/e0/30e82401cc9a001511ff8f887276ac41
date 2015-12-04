@@ -1,12 +1,10 @@
 // edfile.java
 // Template for a line-oriented text editor inspired by ed.
 
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.util.Scanner;
 
 import static java.lang.System.*;
-import java.io.*;
+  java.io.*;
 
 class edfile{
 
