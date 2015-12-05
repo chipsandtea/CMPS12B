@@ -15,16 +15,8 @@ public class Adventure {
 		
 	}
 	
-	public void play(){
-		Scanner kboard = new Scanner(System.in);
-		while(!haveWon){
-			playTurn(kboard);
-		}
-	}
-	
-	private void playTurn(Scanner kb){
+	public void playTurn(Scanner kb){
 		System.out.println(currentRoom.toString());
-		String choice = kb.nextLine();
 	}
 	
 	private void parseAdventureFile(String filename) throws IOException{

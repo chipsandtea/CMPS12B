@@ -15,16 +15,8 @@ public class Adventure {
 		
 	}
 	
-	public void play(){
-		Scanner kboard = new Scanner(System.in);
-		while(!haveWon){
-			playTurn(kboard);
-		}
-	}
-	
 	private void playTurn(Scanner kb){
-		System.out.println(currentRoom.toString());
-		String choice = kb.nextLine();
+		//Runs through one turn
 	}
 	
 	private void parseAdventureFile(String filename) throws IOException{
@@ -58,16 +50,6 @@ public class Adventure {
 		case 'd': return 2;
 		case 'o': return 3;
 		case 't': return 4;
-		default: return -1;
-		}
-	}
-	
-	private int parseUserCommand(char key){
-		switch(key){
-		case 'r': return 1;
-		case 'q': return 2;
-		case 'y': return 3;
-		case 'z': return 4;
 		default: return -1;
 		}
 	}
